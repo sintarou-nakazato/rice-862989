@@ -4,7 +4,7 @@
       <p class="prototype__hedding">
         <%= @food.title%>
       </p>
-      <%= link_to @food.user.name, root_path, class: :prototype__user %>
+      <%= link_to @food.user.name, user_path(@food.user.id), class: :prototype__user %>
         <% if user_signed_in? && current_user.id == @food.user_id%>
         <div class="prototype__manage">
           <%= link_to "編集する", edit_food_path, class: :prototype__btn %>
@@ -45,7 +45,7 @@
           <% @comments.each do |comment| %>
             <li class="comments_list">
               <%= link_to comment.text%>
-              <%= link_to comment.user.name, root_path, class: :comment_user %>
+              <%= link_to comment.user.name, user_path(comment.user.id), class: :comment_user %>
             </li>
           <% end %>
           <%# // 投稿に紐づくコメントを一覧する処理を記述する %>
