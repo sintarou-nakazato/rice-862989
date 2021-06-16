@@ -9,4 +9,5 @@ class User < ApplicationRecord
   validates :profile, presence: true
 
   has_many :foods
+  has_many :comments
 end
