@@ -9,7 +9,7 @@
 | name       | string | NOT: NULL   |
 | profile    | text   | NOT: NULL   |
 
-##prototypesテーブル
+##foodテーブル
 
 | Column     | Type       | Options     |
 | ---------- | ---------- | ----------- |
