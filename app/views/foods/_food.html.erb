@@ -2,7 +2,9 @@
   <%= link_to image_tag(food.image, size: '320x240'),food_path(food.id) %>
   <div class="card__body">
     <%= link_to food.title, food_path(food.id), class: :card__title%>
-    <%= food.created_at.strftime('%Y/%m/%d %H:%M') %>
+      <div class="card-time">
+      <%= food.created_at.strftime('%Y/%m/%d %H:%M') %>
+      </div>
     <p class="card__summary">
       <%= food.catch_copy %>
     </p>

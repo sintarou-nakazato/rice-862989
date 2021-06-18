@@ -1,4 +1,20 @@
 ja:
-  time:
-    formats:
-      default: "%Y/%m/%d %H:%M:%S"
+  activerecord:
+    models:
+      user: ユーザー
+    attributes:
+      user:
+        name: 名前
+        email: メールアドレス
+        profile: プロフィール
+        password: パスワード
+ja:
+  activerecord:
+    models:
+      user: ユーザー
+    attributes:
+      food:
+        title: タイトル
+        catch_copy: キャッチコピー
+        menu: メニュー
+        image: 画像
