@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ProtoSpace</title>
+    <title>今日の晩ご飯</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -14,13 +14,14 @@
     <header class="header">
       <div class="inner">
         <div class="nav">
+          <%= link_to "トップページに戻る",root_path, class: :nav__btn%>
           <div class="nav__left">
-            <%= link_to image_tag("logo.png", class: :logo), root_path %>
+            <%= link_to "今日の晩ご飯", root_path, class: :logo %>
           </div>
           <% if user_signed_in? %>
             <div class="nav__right">
               <%= link_to "ログアウト", destroy_user_session_path, class: :nav__logout, method: :delete%>
-              <%= link_to "New Proto", new_food_path, class: :nav__btn %>
+              <%= link_to "投稿する", new_food_path, class: :nav__btn %>
             </div>
           <% else %>
             <div class="nav__right">
@@ -33,7 +34,7 @@
     </header>
     <%= yield %>
     <footer class="footer">
-      <p class="copyright">Copyright © PROTO SPACE All rights reserved.</p>
+      <p class="copyright">今日の晩ごはん</p>
     </footer>
   </body>
 </html>

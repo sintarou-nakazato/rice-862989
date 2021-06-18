@@ -37,7 +37,7 @@ a {
 /* ヘッダー */
 
 .header {
-  background-color: #f1f8fe;
+  background-color: #eddcbc;
   margin-bottom: 48px;
   padding: 20px 0;
 
@@ -45,6 +45,7 @@ a {
 .inner {
   width: 1024px;
   margin: 0 auto;
+  background-color: #eddcbc;
 }
 .nav {
   width: 100%;
@@ -53,28 +54,30 @@ a {
 }
 .logo {
   width: 200px;
+  text-decoration: none;
+  color: black ;
 }
 .nav__btn{
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  color: #87CEFA;
+  color: #f0821e;
   text-decoration: none;
   user-select: none;
-  border: 1px #87CEFA solid;
+  border: 1px #d52f25 solid;
   border-radius: 3px;
   transition: 0.4s ease;
 }
 .nav__btn:hover{
   color: #fff;
-  background: #87CEFA;
+  background: #d52f25;
 }
 
 .nav__logout{
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  color: #87CEFA;
+  color: #f0821e;
   text-decoration: none;
   user-select: none;
 }
@@ -120,6 +123,10 @@ a {
 
 /* メイン */
 
+.main{
+  background-color: #eddcbc;
+}
+
 .greeting{
   margin-bottom: 20px;
 }
@@ -134,7 +141,6 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
   min-height: calc(100vh - 161px);
 }
 .card {
@@ -233,6 +239,10 @@ a {
   font-size: 16px;
   color: #999;
   text-decoration: underline;
+}
+
+.detail__message{
+  
 }
 
 /* ユーザーページ */

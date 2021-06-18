@@ -8,6 +8,6 @@ class User < ApplicationRecord
   validates :name, presence: true
   validates :profile, presence: true
 
-  has_many :foods
-  has_many :comments
+  has_many :foods, dependent: :destroy
+  has_many :comments, dependent: :destroy
 end
