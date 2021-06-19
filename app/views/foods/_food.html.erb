@@ -1,10 +1,13 @@
 <div class="card">
+  <div class="card__user-name">
+    <div class="user-name">
+      <%= link_to food.user.name, user_path(food.user.id), class: :greeting__link%>
+      <%= food.created_at.strftime('%Y/%m/%d %H:%M') %>
+    </div>
+    <%= link_to food.title, food_path(food.id), class: :card__title%>
+  </div>
   <%= link_to image_tag(food.image, size: '320x240'),food_path(food.id) %>
   <div class="card__body">
-    <%= link_to food.title, food_path(food.id), class: :card__title%>
-      <div class="card-time">
-      <%= food.created_at.strftime('%Y/%m/%d %H:%M') %>
-      </div>
     <p class="card__summary">
       <%= food.catch_copy %>
     </p>
