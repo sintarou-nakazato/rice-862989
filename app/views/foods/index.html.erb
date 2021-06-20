@@ -1,6 +1,22 @@
 <main class="main">
   <div class="inner">
     <div class=memo>
+    <% if user_signed_in? %>
+      <div class=user-names>
+        <%= link_to current_user.name, user_path(current_user.id), class: :greeting__link%>
+        <%= link_to "さんの情報", class: :greeting__link%>
+      </div>
+    <% else %>
+    <h3>
+      このアプリは料理を作るモチベーションを上げてもらうために作られたアプリです。
+    </h3>
+    <div class="example">
+      <%= image_tag 'img_loga.png', class: :img_src%>
+      <h2 class='example-taxt'>
+      料理のモチベーションアプリ
+      </h2>
+    </div>
+    <% end %>
       <h3>
         最新の投稿
       </h3>

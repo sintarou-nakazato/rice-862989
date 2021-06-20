@@ -249,6 +249,10 @@ a {
   text-align:center;
   padding:20px 0;
 }
+
+.user-names{
+  display: flex;
+}
 /* ユーザーページ */
 .user__wrapper{
   min-height: calc(100vh - 161px);
@@ -340,4 +344,20 @@ a {
   .table{
     width: 100%;
   }
+}
+
+.example{
+  position: relative;
+}
+
+.example-taxt{
+  position: absolute;
+  color: white;
+  top: 0;
+  left: 100px;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+}
+
+.img_src{
+  width: 80%;
 }
