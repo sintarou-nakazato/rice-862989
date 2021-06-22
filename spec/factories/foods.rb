@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :food do
     title                  { 'ご飯' }
-    catch_copy             {'こんにちは'}
+    catch_copy             { 'こんにちは' }
     menu                   { '卵3個' }
     association :user
 

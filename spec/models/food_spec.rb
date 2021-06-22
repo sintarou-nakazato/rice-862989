@@ -14,22 +14,22 @@ RSpec.describe Food, type: :model do
       it 'titleが空では登録できない' do
         @food.title = ''
         @food.valid?
-        expect(@food.errors.full_messages).to include "タイトルを入力してください"
+        expect(@food.errors.full_messages).to include 'タイトルを入力してください'
       end
       it 'catch_copyが空なら登録できない' do
         @food.catch_copy = ''
         @food.valid?
-        expect(@food.errors.full_messages).to include "キャッチコピーを入力してください"
+        expect(@food.errors.full_messages).to include 'キャッチコピーを入力してください'
       end
       it 'menuが空なら登録できない' do
         @food.menu = ''
         @food.valid?
-        expect(@food.errors.full_messages).to include "レシピを入力してください"
+        expect(@food.errors.full_messages).to include 'レシピを入力してください'
       end
       it 'image何からなら登録できない' do
         @food.image = nil
         @food.valid?
-        expect(@food.errors.full_messages).to include "画像を入力してください"
+        expect(@food.errors.full_messages).to include '画像を入力してください'
       end
     end
   end

@@ -1,11 +1,11 @@
 class FoodsController < ApplicationController
-  before_action :authenticate_user!, except: [:show, :index]
+  before_action :authenticate_user!, except: %i[show index]
   def index
-  @foods = Food.all.order(created_at: :desc)
+    @foods = Food.all.order(created_at: :desc)
   end
 
   def new
-  @food = Food.new
+    @food = Food.new
   end
 
   def create
@@ -18,16 +18,14 @@ class FoodsController < ApplicationController
   end
 
   def show
-  @food = Food.find(params[:id])
-  @comment = Comment.new
-  @comments = @food.comments.includes(:user)
+    @food = Food.find(params[:id])
+    @comment = Comment.new
+    @comments = @food.comments.includes(:user)
   end
 
   def edit
     @food = Food.find(params[:id])
-    unless @food.user_id == current_user.id
-      redirect_to action: :index
-    end
+    redirect_to action: :index unless @food.user_id == current_user.id
   end
 
   def update
@@ -41,13 +39,11 @@ class FoodsController < ApplicationController
 
   def destroy
     @food = Food.find(params[:id])
-    if @food.destroy
-      redirect_to root_path
-    end
+    redirect_to root_path if @food.destroy
   end
 
-
   private
+
   def food_params
     params.require(:food).permit(:title, :catch_copy, :menu, :image).merge(user_id: current_user.id)
   end
