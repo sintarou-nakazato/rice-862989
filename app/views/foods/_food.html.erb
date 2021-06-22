@@ -6,6 +6,7 @@
     </div>
     <%= link_to food.title, food_path(food.id), class: :card__title%>
   </div>
+  <div id="image-list"></div>
   <%= link_to image_tag(food.image, size: '320x240'),food_path(food.id) %>
   <div class="card__body">
     <p class="card__summary">

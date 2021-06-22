@@ -95,6 +95,11 @@ a {
   width: 50%;
 }
 
+.form__texta{
+  width: 70%;
+  height: 200px;
+}
+
 .field{
   margin: 10px 0;
 }
